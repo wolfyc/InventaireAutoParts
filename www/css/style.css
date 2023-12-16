@@ -1,0 +1,41 @@
+#client-page .content-wrapper {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#client-page .nav-wrapper {
+    margin: 20px 0;
+}
+
+#client-page .nav-button {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#client-page .nav-button:hover {
+    background-color: #45a049;
+}
+
+#client-page table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+#client-page th, #client-page td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#client-page th {
+    background-color: #f2f2f2;
+}
+
+/* Further styling for header and footer */
