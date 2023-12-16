@@ -1,0 +1,66 @@
+.
+├── project_structure.txt
+├── README.md
+└── www
+    ├── add_categorie.php
+    ├── add_client.php
+    ├── add_fournisseur.php
+    ├── add_piece.php
+    ├── categorie.php
+    ├── clients.php
+    ├── crud
+    │   ├── crud_categorie
+    │   │   ├── c_create.php
+    │   │   ├── c_delete.php
+    │   │   ├── c_read.php
+    │   │   ├── c_update.php
+    │   │   ├── db.php
+    │   │   └── test
+    │   │       └── testCrudCategorie.php
+    │   ├── crud_client
+    │   │   ├── cl_create.php
+    │   │   ├── cl_delete.php
+    │   │   ├── cl_read.php
+    │   │   ├── cl_update.php
+    │   │   ├── db.php
+    │   │   └── test
+    │   │       └── testCcrudClient.php
+    │   ├── crud_fournisseur
+    │   │   ├── db.php
+    │   │   ├── fr_create.php
+    │   │   ├── fr_delete.php
+    │   │   ├── fr_read.php
+    │   │   ├── fr_update.php
+    │   │   └── test
+    │   │       └── testCrudFournisseur.php
+    │   └── crud_piece
+    │       ├── db.php
+    │       ├── p_create.php
+    │       ├── p_delete.php
+    │       ├── p_read.php
+    │       ├── p_update.php
+    │       └── test
+    │           └── testCrudPiece.php
+    ├── css
+    │   ├── headerFooter_style.css
+    │   └── style.css
+    ├── db.php
+    ├── edit_categorie.php
+    ├── edit_client.php
+    ├── edit_fournisseur.php
+    ├── edit_piece.php
+    ├── fournisseur.php
+    ├── html
+    │   ├── footer.html
+    │   └── header.html
+    ├── index.php
+    ├── js
+    │   └── script.js
+    ├── list_categorie.php
+    ├── list_client.php
+    ├── list_fournisseur.php
+    ├── list_piece.php
+    ├── pieces.php
+    └── tempCodeRunnerFile.php
+
+14 directories, 50 files

@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 199306
+      MYSQL_DATABASE: inventaireAutoParts
+      MYSQL_USER: wolfy
+      MYSQL_PASSWORD: 199306
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./db-init:/docker-entrypoint-initdb.d
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: wolfy
+      PMA_PASSWORD: 199306
+    depends_on:
+      - db
+
+  web:
+    build: .
+    restart: always
+    ports:
+      - "8081:80"
+    volumes:
+      - ./www:/var/www/html
+    depends_on:
+      - db
+
+volumes:
+  mysql_data:
+
+
