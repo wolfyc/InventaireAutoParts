@@ -2,6 +2,8 @@
 
 include './html/header.html';
 include './crud/crud_categorie/c_read.php'; // File that contains getCategorieByID function
+echo "<body id='client-page'>";
+echo "<div class='content-wrapper'>";
 
 function displayEditForm($Categorie) {
     echo "<h2>Modifier le Categorie</h2>";
@@ -40,6 +42,7 @@ if (!$Categorie) {
 if ($Categorie) {
     displayEditForm($Categorie);
 }
-
+echo "</div>"; // Close content-wrapper
+echo "</body>";
 include './html/footer.html';
 ?>

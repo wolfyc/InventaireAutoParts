@@ -1,4 +1,7 @@
 <?php
+
+$current_page = basename($_SERVER['PHP_SELF']);
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include './html/header.html'; // Adjust the path as needed

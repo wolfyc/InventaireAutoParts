@@ -65,10 +65,45 @@
                 addItemButton.onclick = addItem;
                 orderItems.appendChild(addItemButton);
             });
+            function addPieceToOrder() {
+                var reference = document.getElementById('pieceReference').value;
+                var quantity = parseInt(document.getElementById('quantity').value);
+                var orderDetailsDiv = document.getElementById('orderDetails');
+                var totalAmountSpan = document.getElementById('totalAmount');
+            
+                // AJAX call to fetch piece details
+                fetch('path_to_your_php_script/p_read.php?reference=' + reference)
+                    .then(response => response.json())
+                    .then(data => {
+                        if(data) {
+                            // Calculate total price for this piece
+                            var totalPrice = data.prix_vente_TTC * quantity;
+            
+                            // Append piece details to orderDetailsDiv
+                            orderDetailsDiv.innerHTML += `<p>${data.Nom}: ${quantity} x ${data.prix_vente_TTC} (Total: ${totalPrice})</p>`;
+            
+                            // Update Total Amount
+                            var currentTotal = parseFloat(totalAmountSpan.innerText);
+                            totalAmountSpan.innerText = (currentTotal + totalPrice).toFixed(2);
+                        } else {
+                            alert("Piece not found.");
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
             </script>
         <!-- Add JavaScript to handle adding more items -->
 
         <input type="submit" value="Ajouter Commande">
+    </form>
+    <form id="orderForm">
+        <input type="text" id="pieceReference" placeholder="Piece Reference">
+        <input type="number" id="quantity" placeholder="Quantity">
+        <button type="button" onclick="addPieceToOrder()">Add Piece</button>
+    
+        <div id="orderDetails"></div>
+        <p>Total: <span id="totalAmount">0</span></p>
+        <button type="submit">Submit Order</button>
     </form>
 </body>
 </html>

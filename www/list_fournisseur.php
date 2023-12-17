@@ -1,7 +1,8 @@
 <?php
 //include './html/header.html';
 include './crud/crud_fournisseur/fr_read.php'; // Assuming this script fetches all fournisseurs
-
+echo "<body id='client-page'>";
+echo "<div class='content-wrapper'>";
 echo "<h2>Liste des fournisseurs</h2>";
 echo "<table>";
 echo "<tr><th>ID</th><th>Nom</th><th>Adresse</th><th>Téléphone</th><th>Email</th><th>Actions</th></tr>";
@@ -20,5 +21,7 @@ foreach ($fournisseurs as $fournisseur) {
 }
 
 echo "</table>";
+echo "</div>"; // Close content-wrapper
+echo "</body>";
 include './html/footer.html';
 ?>

@@ -24,7 +24,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "Erreur lors de la création de la pièce.";
     }
 }
-
+echo "<body id='client-page'>";
+echo "<div class='content-wrapper'>";
 // Display the form
 echo "<h2>Ajouter une nouvelle pièce</h2>";
 echo "<form method='post'>";
@@ -51,7 +52,8 @@ echo "</form>";
 
 echo "<a href='add_categorie.php'>Ajouter une nouvelle catégorie</a><br>";
 echo "<a href='add_fournisseur.php'>Ajouter un nouveau fournisseur</a>";
-
+echo "</div>"; // Close content-wrapper
+echo "</body>";
 include './html/footer.html';
 ob_end_flush();
 ?>

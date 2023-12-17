@@ -19,6 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 // Display the form
+echo "<body id='client-page'>";
+echo "<div class='content-wrapper'>";
 echo "<h2>Ajouter un nouveau client</h2>";
 echo "<form method='post'>";
 echo "  <input type='text' name='nom' placeholder='Nom' required><br>";
@@ -27,6 +29,8 @@ echo "  <input type='text' name='telephone' placeholder='Téléphone' required><
 echo "  <input type='email' name='email' placeholder='Email' required><br>";
 echo "   <input type='submit' value='Créer Client'>";
 echo "  </form>";
+echo "</div>"; // Close content-wrapper
+echo "</body>";
 include './html/footer.html';
 ob_end_flush();
 ?>

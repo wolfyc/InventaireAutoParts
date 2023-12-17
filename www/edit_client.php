@@ -2,7 +2,8 @@
 
 include './html/header.html';
 include './crud/crud_client/cl_read.php'; // File that contains getClientByID function
-
+echo "<body id='client-page'>";
+echo "<div class='content-wrapper'>";
 function displayEditForm($client) {
     echo "<h2>Modifier le Client</h2>";
     echo "<form action='./crud/crud_client/cl_update.php' method='post'>";
@@ -42,6 +43,7 @@ if (!$client) {
 if ($client) {
     displayEditForm($client);
 }
-
+echo "</div>"; // Close content-wrapper
+echo "</body>";
 include './html/footer.html';
 ?>

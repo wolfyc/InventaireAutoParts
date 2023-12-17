@@ -1,4 +1,5 @@
 <?php
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include './html/header.html'; // Adjust the path as needed
@@ -9,7 +10,7 @@ echo "<body id='client-page'>";
 echo "<div class='content-wrapper'>";
 echo "<h1>Gestion des Fournisseurs</h1>";
 echo "<div class='nav-wrapper'>";
-echo "  <a href='./list_fournissuer.php' class='nav-button'>Liste des Fournisseurs</a>";
+echo "  <a href='./list_fournisseur.php' class='nav-button'>Liste des Fournisseurs</a>";
 echo "  <a href='./add_fournisseur.php' class='nav-button'>Ajouter un Fournisseur</a>";
 echo "</div>";
 

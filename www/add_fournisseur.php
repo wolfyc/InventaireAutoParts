@@ -17,7 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     $db = null;
 }
-
+echo "<body id='client-page'>";
+echo "<div class='content-wrapper'>";
 // Display the form
 echo "<h2>Ajouter un nouveau fournisseur</h2>";
 echo "<form method='post'>";
@@ -27,6 +28,8 @@ echo "  <input type='text' name='telephone' placeholder='Téléphone' required><
 echo "  <input type='email' name='email' placeholder='Email' required><br>";
 echo "   <input type='submit' value='Créer fournisseur'>";
 echo "  </form>";
+echo "</div>"; // Close content-wrapper
+echo "</body>";
 include './html/footer.html';
 ob_end_flush();
 ?>

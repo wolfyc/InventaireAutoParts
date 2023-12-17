@@ -1,6 +1,16 @@
 .
+├── config
+│   └── 000-default.conf
+├── db-init
+│   └── init.sql
+├── docker-compose.yml
+├── dockerfile
+├── img
+│   ├── DALL·E 2023-12-17 20.49.37 - A scene depicting stock management in an auto parts store with a Sorbonne University student involved. The setting is a warehouse with shelves filled .png
+│   └── download.png
 ├── project_structure.txt
 ├── README.md
+├── tree.txt
 └── www
     ├── add_categorie.php
     ├── add_client.php
@@ -44,6 +54,8 @@
     ├── css
     │   ├── headerFooter_style.css
     │   └── style.css
+    ├── database_sql
+    │   └── backup_sql.sql
     ├── db.php
     ├── edit_categorie.php
     ├── edit_client.php
@@ -54,13 +66,18 @@
     │   ├── footer.html
     │   └── header.html
     ├── index.php
-    ├── js
-    │   └── script.js
     ├── list_categorie.php
     ├── list_client.php
     ├── list_fournisseur.php
     ├── list_piece.php
+    ├── order
+    │   ├── add_order.php
+    │   ├── list_orders.php
+    │   ├── order.html
+    │   ├── order.php
+    │   └── view_order_details.php
     ├── pieces.php
-    └── tempCodeRunnerFile.php
+    ├── tempCodeRunnerFile.php
+    └── view_order_details.php
 
-14 directories, 50 files
+18 directories, 63 files

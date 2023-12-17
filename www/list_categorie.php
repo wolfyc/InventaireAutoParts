@@ -1,7 +1,8 @@
 <?php
 //include './html/header.html';
 include './crud/crud_categorie/c_read.php'; // Assuming this script fetches all Categories
-
+echo "<body id='client-page'>";
+echo "<div class='content-wrapper'>";
 echo "<h2>Liste des Categories</h2>";
 echo "<table>";
 echo "<tr><th>ID</th><th>Nom</th><th>Actions</th></tr>";
@@ -18,5 +19,7 @@ foreach ($Categories as $Categorie) {
 }
 
 echo "</table>";
+echo "</div>"; // Close content-wrapper
+echo "</body>";
 include './html/footer.html';
 ?>

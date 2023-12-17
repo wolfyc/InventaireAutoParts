@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Dec 16, 2023 at 09:19 PM
+-- Generation Time: Dec 17, 2023 at 08:36 PM
 -- Server version: 8.2.0
 -- PHP Version: 8.2.8
 
@@ -37,6 +37,9 @@ CREATE TABLE `Categorie` (
 --
 
 INSERT INTO `Categorie` (`ID_Categorie`, `Nom_Categorie`) VALUES
+(11, 'Boujie d\'allumage'),
+(9, 'Filtre'),
+(10, 'Plaquette de frein'),
 (4, 'pneumatiques');
 
 -- --------------------------------------------------------
@@ -237,7 +240,7 @@ ALTER TABLE `Pièce`
 -- AUTO_INCREMENT for table `Categorie`
 --
 ALTER TABLE `Categorie`
-  MODIFY `ID_Categorie` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `ID_Categorie` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `Client`

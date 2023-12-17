@@ -2,7 +2,8 @@
 
 include './html/header.html';
 include './crud/crud_fournisseur/fr_read.php'; // File that contains getFournisseurByID function
-
+echo "<body id='client-page'>";
+echo "<div class='content-wrapper'>";
 function displayEditForm($Fournisseur) {
     echo "<h2>Modifier le Fournisseur</h2>";
     echo "<form action='./crud/crud_fournisseur/fr_update.php' method='post'>";
@@ -42,6 +43,7 @@ if (!$Fournisseur) {
 if ($Fournisseur) {
     displayEditForm($Fournisseur);
 }
-
+echo "</div>"; // Close content-wrapper
+echo "</body>";
 include './html/footer.html';
 ?>

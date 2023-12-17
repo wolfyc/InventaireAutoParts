@@ -9,7 +9,8 @@ function getAllOrders() {
 }
 
 $orders = getAllOrders();
-
+echo "<body id='client-page'>";
+echo "<div class='content-wrapper'>";
 // HTML to display orders
 echo "<h2>Liste des Commandes Clients</h2>";
 echo "<table>";

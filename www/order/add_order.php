@@ -16,6 +16,13 @@ function createOrderDetail($idCommande, $idPiece, $quantite, $prixUnitaire) {
     return $stmt->execute([$idCommande, $idPiece, $quantite, $prixUnitaire]);
 }
 
+function updateOrderTotal($orderId, $newTotal) {
+    $db = getDbConnection();
+    $stmt = $db->prepare("UPDATE `Commande_Client` SET Total = ? WHERE ID_Commande_Client = ?");
+    $stmt->execute([$newTotal, $orderId]);
+    return $stmt->rowCount() > 0;
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $dateCommande = $_POST['dateCommande'];
     $total = $_POST['total'];

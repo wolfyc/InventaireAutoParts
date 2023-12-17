@@ -3,7 +3,8 @@ ob_start(); // Start output buffering
 include './html/header.html';
 include './crud/crud_piece/p_read.php'; // Contains getPieceByReference function
 include './crud/crud_piece/p_update.php'; // Contains updatePiece function
-
+echo "<body id='client-page'>";
+echo "<div class='content-wrapper'>";
 function displayEditForm($piece) {
     echo "<h2>Modifier la Pièce</h2>";
     echo "<form  method='post'>";
@@ -80,18 +81,9 @@ if (!$piece) {
     echo "<input type='submit' value='Chercher Pièce'>";
     echo "</form>";
 } 
-/*
-if (isset($_GET['ref']) && !empty($_GET['ref'])) {
-    // Fetch piece for editing
-    $reference = $_GET['ref'];
-    $piece = getPieceByReference($reference);
-    if ($piece) {
-        displayEditForm($piece);
-    } else {
-        echo "<p>Pièce non trouvée.</p>";
-    }
-}
-*/
+echo "</div>"; // Close content-wrapper
+echo "</body>";
+
 include './html/footer.html';
 ob_end_flush();
 ?>

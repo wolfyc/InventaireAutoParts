@@ -1,7 +1,9 @@
 <?php
+
 //include './html/header.html';
 include './crud/crud_piece/p_read.php'; // This script should contain a function to fetch all pieces
-
+echo "<body id='client-page'>";
+echo "<div class='content-wrapper'>";
 echo "<h2>Liste des Pièces</h2>";
 echo "<table>";
 echo "<tr><th>ID</th><th>Nom</th><th>Catégorie</th><th>Référence</th><th>Prix Achat</th><th>Prix Vente</th><th>Quantité en Stock</th><th>Marque</th><th>Actions</th></tr>";
@@ -23,5 +25,7 @@ foreach ($pieces as $piece) {
 }
 
 echo "</table>";
+echo "</div>"; // Close content-wrapper
+echo "</body>";
 include './html/footer.html';
 ?>
